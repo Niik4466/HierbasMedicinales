@@ -1,0 +1,28 @@
+.navegacion {
+  background-color: rgb(227, 227, 227); /* Color de fondo */
+  margin-bottom: 4rem; /* Margen inferior */
+  color: #505050;
+  padding: 10px 5px; /* Relleno, 10 arriba y abajo, 5 izquierda y derecha */
+  display: flex; /* Mostrar como Flexbox */
+  flex-wrap: wrap; /* Ajustar a la pantalla */
+  justify-content: center; /* Centrar los elementos */
+  gap: 2rem; /* Espacio entre elementos */
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.navegacion a:hover {
+  color: #000;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
