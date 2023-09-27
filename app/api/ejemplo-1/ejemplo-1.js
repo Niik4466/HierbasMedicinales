@@ -4,22 +4,39 @@ import { NextResponse } from "next/server";
 
 export const miArreglo = [
   {
-    id: 1,
-    nombre: "Juan",
-    apellido: "Perez",
-    edad: 25,
+    foto: "",
+    planta: "Abedul",
+    cientifico: "Betula Pendula Roth",
+    informacion:"",
+    dolencia: "",
   },
   {
-    id: 2,
-    nombre: "Maria",
-    apellido: "Gomez",
-    edad: 30,
+    foto: "",
+    planta: "",
+    cientifico: "",
+    informacion:"",
+    dolencia: "",
   },
   {
-    id: 3,
-    nombre: "Pedro",
-    apellido: "Gonzalez",
-    edad: 40,
+    foto: "",
+    planta: "",
+    cientifico: "",
+    informacion:"",
+    dolencia: "",
+  },
+  {
+    foto: "",
+    planta: "",
+    cientifico: "",
+    informacion:"",
+    dolencia: "",
+  },
+  {
+    foto: "",
+    planta: "",
+    cientifico: "",
+    informacion:"",
+    dolencia: "",
   },
 ];
 
