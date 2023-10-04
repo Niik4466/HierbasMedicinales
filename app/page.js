@@ -1,3 +1,18 @@
-export default function Home() {
-  return <main className="center">Esto es el Main</main>;
+import MainPage from "@/app/MainPage";
+
+// Hacemos la carga de información desde el servidor
+const fetchData = async () => {
+  const response = await import("@/app/api/ejemplo-1/ejemplo-1", {
+    method: "GET",
+  });
+  // response es un objeto que tiene muchas propiedades, entre ellas "miArreglo"
+  const data = response.miArreglo;
+  return data;
+};
+
+export default async function getData() {
+  const data = await fetchData(); // Esperamos a que la función fetchData termine de ejecutarse
+  return (
+    <MainPage data={data}/>
+  );
 }
