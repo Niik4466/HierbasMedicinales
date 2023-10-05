@@ -30,7 +30,7 @@ export const miArreglo = [
     planta: "Albahaca",
     cientifico: "Ocimum basilicum L.",
     informacion:"La infusión se prepara con 1 cucharada del vegetal para 1 litro de agua recién hervida: beber 1 taza 3 veces en el día. Como laxante, usar en ayunas y antes del almuerzo",
-    dolencia: ["probelmas menstruales", "afecciones estomacales", "afecciones a la piel", "reumatismo", "cicatrizante y antiséptico"],
+    dolencia: ["problemas menstruales", "afecciones estomacales", "afecciones a la piel", "reumatismo", "cicatrizante y antiséptico"],
   },
   {
     foto: "https://lamesahabla.com/wp-content/uploads/2021/03/mesa-habla-alcachofas-planta-1-1000x799.jpg",
