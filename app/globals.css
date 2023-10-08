@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'BelgianoSerif2'; /* Puedes elegir el nombre que desees */
+  src: url('/font/BelgianoSerif2.ttf') format('truetype'); /* Ajusta la ruta y el formato según tu fuente */
+}
 .navegacion {
   background-color: rgba(187, 248, 143, 0.504); /* Color de fondo */
   margin-bottom: 4rem; /* Margen inferior */
@@ -13,3 +17,4 @@
 .navegacion a:hover {
   color: #000;
 }
+
