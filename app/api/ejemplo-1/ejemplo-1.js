@@ -159,7 +159,7 @@ export const miArreglo = [
     dolencia: ["trastornos renales y de las vías urinarias", "retención de líquidos"],
   },
   {
-    foto: "https://viverochillan.cl/wp-content/uploads/2020/10/chilco.jpg",
+    foto: "https://inaturalist-open-data.s3.amazonaws.com/photos/267404738/large.jpg",
     planta: "Chilco",
     cientifico: "Fuchsia magellanica Lam.",
     informacion:"Se usa en decocción o cocimiento, la que se prepara con 1 cucharada de planta para 1 litro de agua, hervir 5 minutos y dejar reposar: beber 1 taza 2-3 veces al día.",
