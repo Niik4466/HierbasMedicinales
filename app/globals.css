@@ -1,28 +1,23 @@
+@font-face {
+  font-family: 'BelgianoSerif2'; /* Puedes elegir el nombre que desees */
+  src: url('/font/BelgianoSerif2.ttf') format('truetype'); /* Ajusta la ruta y el formato según tu fuente */
+}
 .navegacion {
-  background-color: rgb(227, 227, 227); /* Color de fondo */
+  background-color: rgba(210, 255, 127, 0.986); /* Color de fondo */
   margin-bottom: 4rem; /* Margen inferior */
-  color: #505050;
-  padding: 10px 5px; /* Relleno, 10 arriba y abajo, 5 izquierda y derecha */
+  color: #000000;
+  padding: 5% 3%; /* Relleno, 10 arriba y abajo, 5 izquierda y derecha */
   display: flex; /* Mostrar como Flexbox */
-  flex-wrap: wrap; /* Ajustar a la pantalla */
+  flex-wrap: wrap; /* Ajustar a la pa ntalla */
   justify-content: center; /* Centrar los elementos */
   gap: 2rem; /* Espacio entre elementos */
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #ffffff;
 }
 
 .navegacion a:hover {
   color: #000;
 }
 
-.contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.miCard .chakra-card__body {
+  background-color: #ff0000; /* Cambia el color de fondo según tu preferencia */
 }
