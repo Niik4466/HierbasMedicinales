@@ -3,7 +3,7 @@
   src: url('/font/BelgianoSerif2.ttf') format('truetype'); /* Ajusta la ruta y el formato según tu fuente */
 }
 .navegacion {
-  background-color: rgba(187, 248, 143, 0.323); /* Color de fondo */
+  background-color: rgba(210, 255, 127, 0.986); /* Color de fondo */
   margin-bottom: 4rem; /* Margen inferior */
   color: #000000;
   padding: 5% 3%; /* Relleno, 10 arriba y abajo, 5 izquierda y derecha */
@@ -18,3 +18,6 @@
   color: #000;
 }
 
+.miCard .chakra-card__body {
+  background-color: #ff0000; /* Cambia el color de fondo según tu preferencia */
+}
