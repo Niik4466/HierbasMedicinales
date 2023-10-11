@@ -6,7 +6,7 @@ import { Img } from "@chakra-ui/react";
 export default function Home({data}) {
   return(
     <div>
-        <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"}>
+        <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"} fontStyle={""}>
           Catálogo de hierbas medicinales Chilenas
         </Text>
         <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
