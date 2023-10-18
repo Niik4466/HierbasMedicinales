@@ -17,12 +17,13 @@ export default function Home({data}) {
           <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"}>
             Catálogo de hierbas medicinales Chilenas
           </Text>
+          <Button colorScheme='blue'>Button</Button>
           <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
             {data.map((hierba) => (
               <TarjetaHierba hierba={hierba}/>
             ))}
           </div>
-          <Button colorScheme='blue'>Button</Button>    
+              
       </div>
     </ChakraProvider>
   )
