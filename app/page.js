@@ -2,7 +2,7 @@ import MainPage from "@/app/MainPage";
 
 // Hacemos la carga de información desde el servidor
 const fetchData = async () => {
-  const response = await import("@/app/api/ejemplo-1/ejemplo-1", {
+  const response = await import("@/app/api/hierbas", {
     method: "GET",
   });
   // response es un objeto que tiene muchas propiedades, entre ellas "miArreglo"
