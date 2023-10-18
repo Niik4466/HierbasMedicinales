@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardBody, CardFooter, CardHeader, Container, Text, chakra, extendTheme, ChakraProvider, Img } from "@chakra-ui/react";
+import { Card, CardBody, CardFooter, CardHeader, Container, Text, chakra, extendTheme, ChakraProvider, Img, Button, ButtonGroup} from "@chakra-ui/react";
 import TarjetaHierba from "./components/TarjetaHierba";
 
 const theme = extendTheme({
@@ -22,6 +22,7 @@ export default function Home({data}) {
               <TarjetaHierba hierba={hierba}/>
             ))}
           </div>
+          <Button colorScheme='blue'>Button</Button>    
       </div>
     </ChakraProvider>
   )
