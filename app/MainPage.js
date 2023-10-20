@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardBody, CardFooter, CardHeader, Container, Text, chakra, extendTheme, ChakraProvider, Img, Button, ButtonGroup} from "@chakra-ui/react";
+import {Text, extendTheme, ChakraProvider, Button} from "@chakra-ui/react";
 import TarjetaHierba from "./components/TarjetaHierba";
 
 const theme = extendTheme({
