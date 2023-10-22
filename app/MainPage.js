@@ -40,11 +40,11 @@ export default function Home({data}) {
           </Text>
           <Button ref={btnRef} colorScheme='blue' justifyContent="left" onClick={onOpen}>Filtrar por dolencia</Button>
           <Drawer
+            size = {"xl"}
             isOpen={isOpen}
             placement='right'
             onClose={onClose}
             finalFocusRef={btnRef}
-            size = {"xl"}
           >
             <DrawerOverlay />
             <DrawerContent>
