@@ -6,16 +6,10 @@ import {
   ChakraProvider,
   Button,
   useDisclosure,
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
 } from "@chakra-ui/react";
-import React from 'react';
+import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
+import DrawerComponent from "./components/DrawerComponent";
 
 const theme = extendTheme({
   fonts: {
@@ -24,13 +18,10 @@ const theme = extendTheme({
   },
 });
 
-
-
-
 export default function Home({data}) {
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
+  const btnRef = useRef();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return(
     <ChakraProvider theme={theme}>
@@ -39,37 +30,7 @@ export default function Home({data}) {
             Catálogo de hierbas medicinales Chilenas
           </Text>
           <Button ref={btnRef} colorScheme='blue' justifyContent="left" onClick={onOpen}>Filtrar por dolencia</Button>
-          <Drawer
-            size = {"xl"}
-            isOpen={isOpen}
-            placement='right'
-            onClose={onClose}
-            finalFocusRef={btnRef}
-          >
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerHeader>Selecciona tipo de dolencia</DrawerHeader>
-              <DrawerBody>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Consequat nisl vel pretium lectus quam id. Semper quis lectus
-                nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus
-                quis varius quam quisque. Massa ultricies mi quis hendrerit dolor
-                magna eget est lorem. Erat imperdiet sed euismod nisi porta.
-                Lectus vestibulum mattis ullamcorper velit.
-                </p>
-              </DrawerBody>
-
-              <DrawerFooter>
-                <Button variant='outline' mr={3} onClick={onClose}>
-                  Cancel
-                </Button>
-                <Button colorScheme='blue'>Save</Button>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
+          <DrawerComponent isOpen={isOpen} onClose={onClose} />
           <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
             {data.map((hierba) => (
               <TarjetaHierba hierba={hierba}/>
