@@ -8,6 +8,9 @@ const theme = extendTheme({
     body: "BelgianoSerif2, sans-serif",
     heading: "BelgianoSerif2, sans-serif",
   },
+  colors: {
+    customGreen: "#46552b", 
+  },
 });
 
 export default function Home({data}) {
@@ -17,7 +20,7 @@ export default function Home({data}) {
           <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"}>
             Catálogo de hierbas medicinales Chilenas
           </Text>
-          <Button colorScheme='blue' justifyContent="left">Filtrar por dolencia</Button>
+          <Button colorScheme="teal" marginLeft={"78rem"}>Filtrar por dolencia</Button>
           <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
             {data.map((hierba) => (
               <TarjetaHierba hierba={hierba}/>
