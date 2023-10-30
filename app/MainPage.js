@@ -1,7 +1,15 @@
 "use client"
 
-import { Card, CardBody, CardFooter, CardHeader, Container, Text, chakra, extendTheme, ChakraProvider, Img, Button, ButtonGroup} from "@chakra-ui/react";
+import {
+  Text,
+  extendTheme,
+  ChakraProvider,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
+import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
+import DrawerComponent from "./components/DrawerComponent";
 
 const theme = extendTheme({
   fonts: {
@@ -14,13 +22,18 @@ const theme = extendTheme({
 });
 
 export default function Home({data}) {
+
+  const btnRef = useRef();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return(
     <ChakraProvider theme={theme}>
       <div>
           <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"}>
             Catálogo de hierbas medicinales Chilenas
           </Text>
-          <Button colorScheme="teal" marginLeft={"78rem"}>Filtrar por dolencia</Button>
+          <Button ref={btnRef} colorScheme="teal" marginLeft={"78rem"} onClick={onOpen}>Filtrar por dolencia</Button>
+          <DrawerComponent isOpen={isOpen} onClose={onClose} />
           <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
             {data.map((hierba) => (
               <TarjetaHierba hierba={hierba}/>
