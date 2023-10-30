@@ -16,9 +16,6 @@ const theme = extendTheme({
     body: "BelgianoSerif2, sans-serif",
     heading: "BelgianoSerif2, sans-serif",
   },
-  colors: {
-    customGreen: "#46552b", 
-  },
 });
 
 export default function Home({data}) {
