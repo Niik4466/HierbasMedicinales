@@ -16,7 +16,7 @@ const DrawerComponent = ({ isOpen, onClose }) => {
 
   return (
     //tamaño del drawer: xs, sm, md, lg, xl, full.
-    <Drawer size="xl" isOpen={isOpen} placement="right" onClose={onClose}>
+    <Drawer size="md" isOpen={isOpen} placement="right" onClose={onClose}>
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
