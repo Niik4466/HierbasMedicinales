@@ -8,23 +8,32 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Button,
+
+  Box,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 
 
 const DrawerComponent = ({ isOpen, onClose }) => {
-
   return (
     //tamaño del drawer: xs, sm, md, lg, xl, full.
     <Drawer size="md" isOpen={isOpen} placement="right" onClose={onClose}>
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
-        <DrawerHeader>Selecciona tipo de dolencia</DrawerHeader>
-        <DrawerBody>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Semper quis lectus nulla at volutpat diam ut venenatis. Dolor morbi non arcu risus quis varius quam quisque. Massa ultricies mi quis hendrerit dolor magna eget est lorem. Erat imperdiet sed euismod nisi porta. Lectus vestibulum mattis ullamcorper velit.
-          </p>
+        <DrawerHeader style={{ fontSize: '35px' }} >Selecciona tipo de dolencia</DrawerHeader>
+        <DrawerBody className="drawer-text">
+          <p > Problemas renales y de las vias urinarias </p>
+          <p > Afecciones a la piel y lesiones externas </p>
+          <p > Problemas y malestares estomacales </p>
+          <p > Dolor corporal y de las articulaciones </p>
+          <p > Problemas hepaticos y/o biliares </p>
+          <p > Fiebre y resfriado </p>
+          <p > Problemas menstruales </p>
+          <p > Dolores de cabeza </p>
+          <p > Salud mental </p>
+          <p > Enfermedades crónicas </p>
+          <p > </p>
         </DrawerBody>
         <DrawerFooter>
           <Button variant="outline" mr={3} onClick={onClose}>
