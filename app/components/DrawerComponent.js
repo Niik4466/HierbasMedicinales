@@ -23,6 +23,19 @@ const CustomButton = ({ children, ...props }) => {
 };
 
 const DrawerComponent = ({ isOpen, onClose }) => {
+  const dolencias = [
+    "Problemas renales y de las vias urinarias",
+    "Afecciones a la piel y lesiones externas",
+    "Problemas y malestares estomacales",
+    "Dolor corporal y de las articulaciones",
+    "Problemas hepaticos y/o biliares",
+    "Fiebre y resfriado",
+    "Problemas menstruales",
+    "Dolores de cabeza",
+    "Salud mental",
+    "Enfermedades crónicas",
+  ];
+
   return (
     //tamaño del drawer: xs, sm, md, lg, xl, full.
     <Drawer size="md" isOpen={isOpen} placement="right" onClose={onClose}>
@@ -32,36 +45,11 @@ const DrawerComponent = ({ isOpen, onClose }) => {
         <DrawerHeader style={{ fontSize: '35px' }} >Selecciona tipo de dolencia</DrawerHeader>
         <DrawerBody className="drawer-text">
           <Stack spacing={4} align="flex-start">
-            <CustomButton>
-              Problemas renales y de las vias urinarias 
-            </CustomButton>
-            <CustomButton> 
-              Afecciones a la piel y lesiones externas 
-            </CustomButton>
-            <CustomButton >
-              Problemas y malestares estomacales
-            </CustomButton >
-            <CustomButton>
-              Dolor corporal y de las articulaciones 
-            </CustomButton>
-            <CustomButton>
-              Problemas hepaticos y/o biliares 
-            </CustomButton>
-            <CustomButton>
-              Fiebre y resfriado 
-            </CustomButton>
-            <CustomButton>
-              Problemas menstruales 
-            </CustomButton>
-            <CustomButton>
-              Dolores de cabeza 
-            </CustomButton>
-            <CustomButton>
-              Salud mental 
-            </CustomButton>
-            <CustomButton>
-              Enfermedades crónicas 
-            </CustomButton>
+            {dolencias.map((dolencia, index) => (
+              <CustomButton key={index}>
+                {dolencia}
+              </CustomButton>
+            ))}
           </Stack>
         </DrawerBody>
         <DrawerFooter>
