@@ -21,3 +21,6 @@
 .miCard .chakra-card__body {
   background-color: #ff0000; /* Cambia el color de fondo según tu preferencia */
 }
+.drawer-text {
+  font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
+}
