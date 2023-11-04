@@ -16,7 +16,7 @@ import { useDisclosure } from "@chakra-ui/react";
 
 const CustomButton = ({ children, ...props }) => {
   return (
-    <Button variant='link' size='xl' {...props}>
+    <Button variant='link' size='xl'  {...props}>
       {children}
     </Button>
   );
@@ -46,17 +46,14 @@ const DrawerComponent = ({ isOpen, onClose }) => {
         <DrawerBody className="drawer-text">
           <Stack spacing={4} align="flex-start">
             {dolencias.map((dolencia, index) => (
-              <CustomButton key={index}>
+              <CustomButton key={index }onClick={onClose}>
                 {dolencia}
               </CustomButton>
             ))}
           </Stack>
         </DrawerBody>
         <DrawerFooter>
-          <Button variant="outline" mr={3} onClick={onClose}>
-            Cancel
-          </Button>
-          <Button colorScheme="blue">Save</Button>
+          <Button colorScheme="blue" style={{ fontSize: '35px' }} onClick={onClose}>Limpiar</Button>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
