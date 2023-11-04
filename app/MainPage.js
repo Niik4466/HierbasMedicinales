@@ -10,6 +10,7 @@ import {
 import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
 import DrawerComponent from "./components/DrawerComponent";
+//import FooterComponent from "./components/FooterComponent";
 
 const theme = extendTheme({
   fonts: {
@@ -36,8 +37,9 @@ export default function Home({data}) {
               <TarjetaHierba hierba={hierba}/>
             ))}
           </div>
-              
       </div>
+
     </ChakraProvider>
+
   )
 }
