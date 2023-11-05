@@ -1,5 +1,4 @@
 import MainPage from "@/app/MainPage";
-
 // Hacemos la carga de información desde el servidor
 const fetchData = async () => {
   const response = await import("@/app/api/hierbas", {
@@ -9,6 +8,7 @@ const fetchData = async () => {
   const data = response.miArreglo;
   return data;
 };
+
 
 export default async function getData() {
   const data = await fetchData(); // Esperamos a que la función fetchData termine de ejecutarse

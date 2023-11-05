@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
+import { useState } from "react";
 import DrawerComponent from "./components/DrawerComponent";
 //import FooterComponent from "./components/FooterComponent";
 
@@ -23,6 +24,7 @@ export default function Home({data}) {
 
   const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [dolencia, setDolencia] = useState("None");
 
   return(
     <ChakraProvider theme={theme}>
@@ -31,15 +33,14 @@ export default function Home({data}) {
             Catálogo de hierbas medicinales Chilenas
           </Text>
           <Button ref={btnRef} colorScheme="teal" marginLeft={"78rem"} onClick={onOpen}>Filtrar por dolencia</Button>
-          <DrawerComponent isOpen={isOpen} onClose={onClose} />
+          <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia}/>
           <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
             {data.map((hierba) => (
-              <TarjetaHierba hierba={hierba}/>
+              <TarjetaHierba hierba={hierba} dolencia={dolencia} setDolencia={setDolencia}/>
             ))}
+            {console.log(dolencia)}
           </div>
       </div>
-
     </ChakraProvider>
-
   )
 }
