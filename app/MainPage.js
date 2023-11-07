@@ -32,7 +32,7 @@ export default function Home({data}) {
           <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"}>
             Catálogo de hierbas medicinales Chilenas
           </Text>
-          <Button ref={btnRef} colorScheme="teal" marginLeft={"78rem"} onClick={onOpen}>Filtrar por dolencia</Button>
+          <Button ref={btnRef} colorScheme="teal" marginLeft={"1rem"} onClick={onOpen}>Filtrar por dolencia</Button>
           <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia}/>
           <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", margin:"1rem"}}>
             {data.map((hierba) => (
