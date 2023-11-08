@@ -11,7 +11,7 @@ import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
 import { useState } from "react";
 import DrawerComponent from "./components/DrawerComponent";
-//import FooterComponent from "./components/FooterComponent";
+import SmallCentered from "./components/FooterComponent";
 
 const theme = extendTheme({
   fonts: {
@@ -40,7 +40,8 @@ export default function Home({data}) {
             ))}
             {console.log(dolencia)}
           </div>
-      </div>
+      </div>  
+      <SmallCentered/>
     </ChakraProvider>
   )
 }

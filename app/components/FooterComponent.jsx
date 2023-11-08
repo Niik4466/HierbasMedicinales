@@ -12,7 +12,7 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { ReactNode } from 'react'
 
-const Logo = (props: any) => {
+const Logo = (props) => {
   return (
     <svg height={32} viewBox="0 0 120 28" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
@@ -27,15 +27,7 @@ const Logo = (props: any) => {
   )
 }
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode
-  label: string
-  href: string
-}) => {
+const SocialButton = ({children, label, href})   => {
   return (
     <chakra.button
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
