@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
 import { useState } from "react";
 import DrawerComponent from "./components/DrawerComponent";
-import SmallCentered from "./components/FooterComponent";
+import SmallWithLogoLeft from "./components/FooterComponent";
 
 const theme = extendTheme({
   fonts: {
@@ -42,9 +42,10 @@ export default function Home({ data }) {
             <TarjetaHierba key={index} hierba={hierba} dolencia={dolencia} setDolencia={setDolencia} />
           ))}
           {console.log(dolencia)}
+        
         </div>
+        <SmallWithLogoLeft/>
       </div>
-      <SmallCentered />
     </ChakraProvider>
   );
 }
