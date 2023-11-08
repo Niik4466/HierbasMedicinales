@@ -22,10 +22,10 @@ export default function Home({ data }) {
   return (
     <ChakraProvider theme={theme}>
       <div>
-        <Text fontSize="5xl" marginBottom={"2%"} maxWidth={"75%"} marginLeft={"1rem"}>
+        <Text fontSize="5xl" marginBottom={"1%"} maxWidth={"85%"} marginLeft={"2rem"}>
           Catálogo de hierbas medicinales Chilenas
         </Text>
-        <Button ref={btnRef} colorScheme="teal" marginLeft={"1rem"} onClick={onOpen}>
+        <Button ref={btnRef} colorScheme="teal" marginLeft={"2rem"} marginRight={"2rem"} onClick={onOpen}>
           Filtrar por dolencia
         </Button>
         <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia} />
@@ -36,8 +36,10 @@ export default function Home({ data }) {
             justifyContent: "space-between",
             flexWrap: "wrap",
             margin: "1rem",
+            width:"98%",
           }}
         >
+          
           {data.map((hierba, index) => (
             <TarjetaHierba key={index} hierba={hierba} dolencia={dolencia} setDolencia={setDolencia} />
           ))}
