@@ -13,8 +13,8 @@ import {
 
 const CustomButton = ({ children, ...props }) => {
   return (
-    <Button variant='link' size='xl'  {...props}>
-      {children}
+    <Button variant='ghost' size='xl' {...props}>
+      <u>{children}</u>
     </Button>
   );
 };
@@ -30,6 +30,7 @@ const dolencias = [
   "Dolores de cabeza",
   "Salud mental",
   "Enfermedades crónicas",
+  
 ];
 
 const DrawerComponent = ({ isOpen, onClose, setDolencia}) => {
@@ -49,19 +50,17 @@ const DrawerComponent = ({ isOpen, onClose, setDolencia}) => {
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
-        <DrawerHeader style={{ fontSize: '35px' }} >Selecciona tipo de dolencia</DrawerHeader>
+        <DrawerHeader style={{ fontSize: '40px' }} >Selecciona tipo de dolencia</DrawerHeader>
         <DrawerBody className="drawer-text">
         <Stack spacing={4} align={"flex-start"}>
+          <CustomButton onClick={() => handleClick("None")}> Mostrar todas</CustomButton>
           {dolencias.map((dolencia, index) => (
-            <CustomButton key={index} onClick={() => handleClick(dolencia)}>
+            <CustomButton key={index} onClick={() => handleClick(dolencia)} >
               {dolencia}
             </CustomButton>
           ))}
         </Stack>
         </DrawerBody>
-        <DrawerFooter>
-          <Button colorScheme="blue" style={{ fontSize: '35px' }} onClick={() => handleClick("None")}>Limpiar</Button>
-        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
