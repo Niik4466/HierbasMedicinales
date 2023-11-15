@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function TarjetaHierba({hierba, dolencia, setDolencia}){
     const [flip, setFlip] = useState(true);
 
-    if (hierba.dolencia.includes(dolencia) || dolencia == "None"){
+    if (hierba.dolencia.includes(dolencia) || dolencia == "Todas"){
         if(flip){
             return(
                 <Card marginBottom={"2.5%"} border="solid" borderWidth={"1%"} marginLeft={"1rem"} width={"20em"} height={"24em"} maxHeight={"24em"} marginRight={"1rem"} onClick={() => setFlip(false)}>

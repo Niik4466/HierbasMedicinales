@@ -52,7 +52,7 @@ const DrawerComponent = ({ isOpen, onClose, setDolencia}) => {
         <DrawerHeader style={{ fontSize: '40px' }} >Selecciona tipo de dolencia</DrawerHeader>
         <DrawerBody className="drawer-text">
         <Stack spacing={4} align={"flex-start"}>
-          <CustomButton on onClick={() => handleClick("None")}>Mostrar todas</CustomButton>
+          <CustomButton on onClick={() => handleClick("Todas")}>Mostrar todas</CustomButton>
           {dolencias.map((dolencia, index) => (
             <CustomButton key={index} onClick={() => handleClick(dolencia)}>
               {dolencia}
