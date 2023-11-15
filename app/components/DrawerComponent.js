@@ -49,9 +49,10 @@ const DrawerComponent = ({ isOpen, onClose, setDolencia}) => {
       <DrawerOverlay />
       <DrawerContent>
         <DrawerCloseButton />
-        <DrawerHeader style={{ fontSize: '35px' }} >Selecciona tipo de dolencia</DrawerHeader>
+        <DrawerHeader style={{ fontSize: '40px' }} >Selecciona tipo de dolencia</DrawerHeader>
         <DrawerBody className="drawer-text">
         <Stack spacing={4} align={"flex-start"}>
+          <CustomButton on onClick={() => handleClick("None")}>Mostrar todas</CustomButton>
           {dolencias.map((dolencia, index) => (
             <CustomButton key={index} onClick={() => handleClick(dolencia)}>
               {dolencia}
@@ -60,7 +61,7 @@ const DrawerComponent = ({ isOpen, onClose, setDolencia}) => {
         </Stack>
         </DrawerBody>
         <DrawerFooter>
-          <Button colorScheme="blue" style={{ fontSize: '35px' }} onClick={() => handleClick("None")}>Limpiar</Button>
+          <Button colorScheme="blue" style={{ fontSize: '35px' }} onClick={() => handleClick("Todas")}>Limpiar</Button>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
