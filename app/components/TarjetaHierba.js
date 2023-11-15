@@ -3,8 +3,10 @@
 import { Card, CardBody, Img, Text } from "@chakra-ui/react"
 
 export default function TarjetaHierba({hierba, dolencia, setDolencia}){
-    if (hierba.dolencia.includes(dolencia) || dolencia == "None"){
+    if (hierba.dolencia.includes(dolencia) || dolencia == "Todas"){
         return(
+            <>
+            
             <Card marginBottom={"2.5%"} border="solid" borderWidth={"1%"} marginLeft={"1rem"} marginRight={"1rem"} >
                 <Img src={hierba.foto} fit={"fill"} boxSize={"100%"} width={"20em"} height={"16.5em"} alt={` Imagen de ${hierba.planta}`}/>
                 <CardBody marginBottom={"-10%"}>
@@ -18,6 +20,8 @@ export default function TarjetaHierba({hierba, dolencia, setDolencia}){
                     </Text>
                 </CardBody>
             </Card>
+            </>
+            
         )
     }
 }

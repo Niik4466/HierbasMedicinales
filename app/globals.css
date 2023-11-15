@@ -12,7 +12,10 @@
   gap: 0rem; /* Espacio entre elementos */
 
 }
-
+.boton {
+  background-color: #8FBC8F;
+  color: #000000;
+}
 .navegacion a:hover {
   color: #000;
   
