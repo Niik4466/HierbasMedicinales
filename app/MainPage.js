@@ -21,8 +21,8 @@ export default function Home({ data }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <div>
-        <Text fontSize="5xl" marginBottom={"1%"} maxWidth={"85%"} marginLeft={"2rem"} >
+      <div style={{minWidth:"100%"}}>
+        <Text fontSize="5xl" marginBottom={"1%"} maxWidth={"85%"} marginLeft={"2rem"}>
           Catálogo de hierbas medicinales Chilenas
         </Text>
         <div style={{
@@ -57,6 +57,7 @@ export default function Home({ data }) {
             flexWrap: "wrap",
             margin: "1rem",
             width:"98%",
+            justifyContent: "center"
           }}
         >
           
@@ -65,7 +66,6 @@ export default function Home({ data }) {
           ))}
           
           {console.log(dolencia)}
-        
         </div>
         <SmallWithLogoLeft/>
       </div>
