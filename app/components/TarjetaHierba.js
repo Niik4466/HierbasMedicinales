@@ -3,7 +3,7 @@
 import { Card, CardBody, Img, Text } from "@chakra-ui/react"
 import { useState } from "react"
 
-export default function TarjetaHierba({hierba, dolencia,informacion, setDolencia}){
+export default function TarjetaHierba({hierba, dolencia, setDolencia}){
     const [flip, setFlip] = useState(true);
 
     if (hierba.dolencia.includes(dolencia) || dolencia == "Todas"){
