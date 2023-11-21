@@ -21,10 +21,34 @@ export default function Home({ data }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <div style={{minWidth:"100%"}}>
-        <Text fontSize="5xl" marginBottom={"1%"} maxWidth={"85%"} marginLeft={"2rem"}>
+      <div >
+        <div style={{
+            background: "#B5DB71",
+          }}> 
+          <Text fontSize="6xl"  maxWidth={"85%"} marginLeft={"2rem"}>
           Catálogo de hierbas medicinales Chilenas
-        </Text>
+        </Text>  
+          </div>
+        
+        <div style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            width:"100%", 
+            padding: "1rem",
+            background: "#B5DB71",
+          }}>
+            
+          <Text fontSize="1xl" marginBottom={"1rem"} marginTop={"0.5rem"} maxWidth={"85%"} marginRight={"2rem"} marginLeft={"2rem"}>
+            Breve descripción de la pagina
+          </Text>
+        </div>
+        <div style={{
+            background: "#d2ff81s",
+          }}>
+          
+        </div>
         <div style={{
             display: "flex",
             flexDirection: "row",
@@ -63,6 +87,7 @@ export default function Home({ data }) {
           
           {data.map((hierba, index) => (
             <TarjetaHierba key={index} hierba={hierba} dolencia={dolencia} setDolencia={setDolencia} />
+            
           ))}
           
           {console.log(dolencia)}
