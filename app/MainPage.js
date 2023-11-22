@@ -21,15 +21,14 @@ export default function Home({ data }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <div >
+      <div style={{ minWidth: "100%" }} overflow={"auto"} >
         <div style={{
           background: "#B5DB71",
         }}>
           <Text fontSize="6xl" maxWidth={"85%"} marginLeft={"2rem"}>
-            Catálogo de hierbas medicinales Chilenas
+            Catálogo de Hierbas Medicinales Chilenas
           </Text>
         </div>
-
         <div style={{
           display: "flex",
           flexDirection: "row",
@@ -40,15 +39,19 @@ export default function Home({ data }) {
           background: "#B5DB71",
         }}>
 
-          <Text fontSize="1xl" marginBottom={"1rem"} marginTop={"0.5rem"} maxWidth={"85%"} marginRight={"2rem"} marginLeft={"2rem"}>
-            Breve descripción de la pagina
+          <Text style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            width: "100%",
+            padding: "1rem",
+            background: "#B5DB71",
+          }} >
+            En esta pagina podras encontrar 30 hierbas junto a sus usos y preparación. Y para que resulte mas fácil encontrar la hierba que necesites, puedes filtrar segun la dolencia que estes padeciendo.
           </Text>
         </div>
-        <div style={{
-          background: "#d2ff81s",
-        }}>
 
-        </div>
         <div style={{
           display: "flex",
           flexDirection: "row",
@@ -73,6 +76,19 @@ export default function Home({ data }) {
 
         </div>
         <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia} />
+
+        <Text style={{
+          display: "flex",
+
+          flexDirection: "row",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          width: "100%",
+          padding: "1rem",
+        }} marginBottom={"1rem"}>
+          Pulsa sobre la hierba que quieras para mas información.
+        </Text>
+
         <div
           style={{
             display: "flex",
@@ -80,7 +96,6 @@ export default function Home({ data }) {
             justifyContent: "space-between",
             flexWrap: "wrap",
             margin: "1rem",
-            width: "98%",
             justifyContent: "center"
           }}
         >
@@ -92,7 +107,7 @@ export default function Home({ data }) {
 
           {console.log(dolencia)}
         </div>
-        <SmallWithLogoLeft />
+        <SmallWithLogoLeft/>
       </div>
     </ChakraProvider>
   );
