@@ -21,7 +21,7 @@ export default function Home({ data }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <div style={{ minWidth: "100%" }} overflow={"auto"} >
+      <div >
         <div style={{
           background: "#B5DB71",
         }}>
@@ -30,8 +30,7 @@ export default function Home({ data }) {
           </Text>
         </div>
 
-
-        <Text style={{
+        <div style={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
@@ -39,9 +38,17 @@ export default function Home({ data }) {
           width: "100%",
           padding: "1rem",
           background: "#B5DB71",
-        }} >
-          En esta pagina podras encontrar 30 hierbas junto a sus usos y preparación. Y para que resulte mas fácil encontrar la hierba que necesites, puedes filtrar segun la dolencia que estes padeciendo.
-        </Text>
+        }}>
+
+          <Text fontSize="1xl" marginBottom={"1rem"} marginTop={"0.5rem"} maxWidth={"85%"} marginRight={"2rem"} marginLeft={"2rem"}>
+            Breve descripción de la pagina
+          </Text>
+        </div>
+        <div style={{
+          background: "#d2ff81s",
+        }}>
+
+        </div>
         <div style={{
           display: "flex",
           flexDirection: "row",
@@ -73,20 +80,10 @@ export default function Home({ data }) {
             justifyContent: "space-between",
             flexWrap: "wrap",
             margin: "1rem",
+            width: "98%",
             justifyContent: "center"
           }}
         >
-          <Text style={{
-            display: "flex",
-
-            flexDirection: "row",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            width: "100%",
-            padding: "1rem",
-          }} marginBottom={"1rem"}>
-            Pulsa sobre la hierba que quieras para mas información.
-          </Text>
 
           {data.map((hierba, index) => (
             <TarjetaHierba key={index} hierba={hierba} dolencia={dolencia} setDolencia={setDolencia} />
