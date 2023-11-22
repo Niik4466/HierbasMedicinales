@@ -27,3 +27,9 @@
 .drawer-text {
   font-size: 1.5em; /* Puedes ajustar el tamaño según tus preferencias */
 }
+.esquina-inferior-derecha {
+  position: absolute; /* Establecer posición absoluta con respecto al contenedor */
+  bottom: 0; /* Distancia desde la parte inferior del contenedor */
+  right: 0;
+  padding: 10px;
+}

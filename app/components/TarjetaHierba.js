@@ -24,7 +24,17 @@ export default function TarjetaHierba({hierba, dolencia, setDolencia}){
                     <CardBody>
                         <Text fontSize={"medium"} fontStyle={"italic"} align={"center"}>
                             ({hierba.cientifico})
+                            
                         </Text>
+                        
+                        <div style={{border: "1.5px solid black", 
+                        position: "absolute",
+                        bottom: 0, 
+                        right: 0,
+                        padding: "3.5px",
+                        borderRadius: "4px",}}>
+                            ⇲
+                        </div>
                     </CardBody>
                 </div>
                 {!flip && (
