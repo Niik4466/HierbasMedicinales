@@ -42,7 +42,7 @@ export default function TarjetaHierba({hierba, dolencia, setDolencia}){
                         style={{ transform: "rotateY(0deg)", transition: "transform 1s", width: "100%", height: "100%", position: "absolute", backfaceVisibility: "hidden",}}>
                         <CardBody>
                             <Text fontSize={"x-large"} align={"center"}>
-                                <strong>
+                                <strong style={{textDecoration: 'underline',}}>
                                 {hierba.planta} 
                                 </strong>
                                    
