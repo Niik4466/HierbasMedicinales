@@ -12,7 +12,7 @@ export default function TarjetaHierba({ hierba, dolencia, setDolencia }) {
 
     if (hierba.dolencia.includes(dolencia) || dolencia == "Todas") {
         return (
-            <Card as='button' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} marginBottom={"2.5%"} border="solid" borderWidth={"1%"} marginLeft={"1rem"} width={"20em"} height={"24em"} maxHeight={"24em"} marginRight={"1rem"} onClick={handleClick} overflow={"auto"}>
+            <Card as='button' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} marginBottom={"2.5%"} border="solid" borderWidth={"1%"} marginLeft={"1rem"} width={"20em"} height={"24em"} maxHeight={"24em"} marginRight={"1rem"} onClick={handleClick} >
                 <div className={`card-container  ${!flip ? 'flipped' : ''}`}>
                     <div className="card-face front">
                         <Img src={hierba.foto} fit={"fill"} boxSize={"100%"} width={"20em"} height={"16.5em"} alt={` Imagen de ${hierba.planta}`} />
@@ -37,7 +37,7 @@ export default function TarjetaHierba({ hierba, dolencia, setDolencia }) {
                             </div>
                         </CardBody>
                     </div>
-                    <div className="card-face back">
+                    <div className="card-face back" style={{ overflow: 'auto' }}>
                         <CardBody>
                             <Text fontSize={"x-large"} align={"center"}>
                                 <strong style={{ textDecoration: 'underline', }}>
