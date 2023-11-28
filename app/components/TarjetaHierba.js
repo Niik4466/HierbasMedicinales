@@ -37,24 +37,37 @@ export default function TarjetaHierba({ hierba, dolencia, setDolencia }) {
                             </div>
                         </CardBody>
                     </div>
-                    <div className="card-face back" style={{ overflow: 'auto' }}>
+                    <div className="card-face back" style={{ overflow: 'auto', background: "#5e846a"}}>
+                        <div style={{ width: "100%", height: "auto" }}  className="titulo" >
                         <CardBody>
-                            <Text fontSize={"x-large"} align={"center"}>
-                                <strong style={{ textDecoration: 'underline', }}>
-                                    {hierba.planta}
+                            <div style={{ width: "100%" }} className="titulo">
+                                <Text fontSize={"x-large"} align={"center"}>
+                                    <strong style={{ textDecoration: 'underline' }}>
+                                        {hierba.planta}
+                                    </strong>
+                                </Text>
+                            </div>
+                            <div className="preparacion">
+                                <strong>
+                                    Preparación:
                                 </strong>
-
-                            </Text>
-                            <Text >
-                                {hierba.informacion}
-                                <br></br>
-                                <br></br>
-                                <strong >
+                                <Text>
+                                    {hierba.informacion}
+                                    <br></br>
+                                    <br></br>
+                                </Text>
+                                
+                            </div>
+                            <div className="usos">
+                                <strong>
                                     Usos:
                                 </strong>
+                            <Text>
                                 {hierba.usos}
                             </Text>
+                            </div>
                         </CardBody>
+                        </div>
                     </div>
                 </div> 
             </Card >

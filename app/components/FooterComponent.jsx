@@ -37,7 +37,8 @@ export default function LargeWithLogoCentered() {
       bg={useColorModeValue('green.300')} //AQUI SE CAMBIA COLOR DE BACKGROUND
       color={useColorModeValue('black.700')}> 
       <Container as={Stack} maxW={'full'} py={10}>
-        <text>Referencias: https://biblioteca.inia.cl/bitstream/handle/20.500.14001/68466/NR42807.pdf?sequence=1&isAllowed=y</text>
+        <strong>Referencias: </strong>
+        <a href="https://biblioteca.inia.cl/bitstream/handle/20.500.14001/68466/NR42807.pdf?sequence=1&isAllowed=y">https://biblioteca.inia.cl/bitstream/handle/20.500.14001/68466/NR42807.pdf?sequence=1&isAllowed=y</a>
       </Container>
       <Box py={10}>
         <Flex

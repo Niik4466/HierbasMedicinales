@@ -21,6 +21,10 @@
   
 }
 
+a {
+  text-decoration: underline; 
+}
+
 .miCard .chakra-card__body {
   background-color: #ff0000; /* Cambia el color de fondo según tu preferencia */
 }
@@ -51,12 +55,28 @@
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
+  background: "#8caa56";
 }
+
 
 .front {
   transform: rotateY(0deg);
+  
 }
 
 .back {
   transform: rotateY(180deg);
+  
+}
+
+.titulo {
+  background-color: #5e846a;
+}
+
+.preparacion {
+  background-color: #8fc2b3; 
+}
+
+.usos {
+  background-color: #2dce90;
 }

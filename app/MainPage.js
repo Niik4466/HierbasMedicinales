@@ -79,14 +79,16 @@ export default function Home({ data }) {
 
         <Text style={{
           display: "flex",
-
+          
           flexDirection: "row",
           justifyContent: "center",
           flexWrap: "wrap",
           width: "100%",
           padding: "1rem",
         }} marginBottom={"1rem"}>
+          <strong>
           Pulsa sobre la hierba que quieras para mas información.
+          </strong>
         </Text>
 
         <div
