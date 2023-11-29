@@ -25,8 +25,8 @@ export default function Home({ data }) {
         <div style={{
           background: "#B5DB71",
         }}>
-          <Text fontSize="6vw" maxWidth={"85%"} marginLeft={"2rem"}>
-            Catálogo de Hierbas Medicinales Chilenas
+          <Text fontSize="6xl" maxWidth={"85%"} marginLeft={"2rem"}>
+            <strong>Catálogo de Hierbas Medicinales Chilenas</strong>
           </Text>
         </div>
         <div style={{
@@ -65,12 +65,12 @@ export default function Home({ data }) {
           <Button ref={btnRef} colorScheme="green" marginTop={"1rem"} marginBottom={"1rem"} marginLeft={"2rem"} marginRight={"2rem"} onClick={onOpen}
             style={{
               border: "1px solid black",
-              fontSize: "55vw",
+              fontSize: "1.5rem",
             }}>
             Filtrar por dolencia
           </Button>
-          <Text fontSize="2xlvw" marginBottom={"1rem"} marginTop={"1rem"} maxWidth={"85%"} marginRight={"2rem"}>
-            Categoria Actual: {dolencia}
+          <Text fontSize="3xl" marginBottom={"1rem"} marginTop={"1rem"} maxWidth={"100%"} marginRight={"2rem"}>
+            <strong>Categoria Actual: {dolencia}</strong>
           </Text>
 
 
