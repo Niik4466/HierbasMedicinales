@@ -49,7 +49,7 @@ export default function TarjetaHierba({ hierba, dolencia, setDolencia }) {
                             </div>
                             <div className="preparacion">
                                 <strong>
-                                    Preparación:
+                                    Preparacin:
                                 </strong>
                                 <Text>
                                     {hierba.informacion}
