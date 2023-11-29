@@ -25,7 +25,7 @@ export default function Home({ data }) {
         <div style={{
           background: "#B5DB71",
         }}>
-          <Text fontSize="6xl" maxWidth={"85%"} marginLeft={"2rem"}>
+          <Text fontSize="5.5vw" maxWidth={"85%"} marginLeft={"2rem"}>
             Catálogo de Hierbas Medicinales Chilenas
           </Text>
         </div>
