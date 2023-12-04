@@ -31,8 +31,8 @@ export default function Home({ data }) {
         <div style={{
           background: "#B5DB71",
         }}>
-          <Text fontSize="5.5vw" maxWidth={"85%"} marginLeft={"2rem"}>
-            Catálogo de Hierbas Medicinales Chilenas
+          <Text fontSize="6xl" maxWidth={"85%"} marginLeft={"2rem"}>
+            <strong>Catálogo de Hierbas Medicinales Chilenas</strong>
           </Text>
         </div>
         <div style={{
@@ -75,16 +75,12 @@ export default function Home({ data }) {
             onClick={onOpen}
             style={{
               border: "1px solid black",
-              fontSize: "1.1rem",
+              fontSize: "1.5rem",
             }}>
             Filtrar por dolencia
           </Button>
-          <Text fontSize="2xl"
-            marginBottom={"1rem"}
-            marginTop={"1rem"}
-            maxWidth={"85%"}
-            marginRight={"2rem"}>
-            Categoria Actual: {dolencia}
+          <Text fontSize="3xl" marginBottom={"1rem"} marginTop={"1rem"} maxWidth={"100%"} marginRight={"2rem"}>
+            <strong>Categoria Actual: {dolencia}</strong>
           </Text>
         </div>
         <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia} />
