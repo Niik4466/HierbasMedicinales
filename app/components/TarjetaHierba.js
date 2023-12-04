@@ -31,7 +31,8 @@ export default function TarjetaHierba({ hierba, dolencia }) {
                 height={"24em"}
                 maxHeight={"24em"}
                 marginRight={"1rem"}
-                onClick={handleClick} >
+                onClick={handleClick}
+            >
                 <div className={`card-container  ${!flip ? 'flipped' : ''}`}>
                     <div className="card-face front">
                         <Img src={hierba.foto}
@@ -39,7 +40,8 @@ export default function TarjetaHierba({ hierba, dolencia }) {
                             boxSize={"100%"}
                             width={"20em"}
                             height={"16.5em"}
-                            alt={` Imagen de ${hierba.planta}`} />
+                            alt={` Imagen de ${hierba.planta}`}
+                        />
                         <CardBody marginBottom={"-10%"}>
                             <Text fontSize={"x-large"}>
                                 {hierba.planta}
@@ -49,14 +51,16 @@ export default function TarjetaHierba({ hierba, dolencia }) {
                             <Text fontSize={"medium"} fontStyle={"italic"} align={"center"}>
                                 ({hierba.cientifico})
                             </Text>
-                            <div style={{
-                                border: "1.5px solid black",
-                                position: "absolute",
-                                bottom: 0,
-                                right: 0,
-                                padding: "3.5px",
-                                borderRadius: "4px",
-                            }}>
+                            <div
+                                style={{
+                                    border: "1.5px solid black",
+                                    position: "absolute",
+                                    bottom: 0,
+                                    right: 0,
+                                    padding: "3.5px",
+                                    borderRadius: "4px",
+                                }}
+                            >
                                 ⇲
                             </div>
                         </CardBody>

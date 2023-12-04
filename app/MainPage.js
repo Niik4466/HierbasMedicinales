@@ -35,16 +35,8 @@ export default function Home({ data }) {
             <strong>Catálogo de Hierbas Medicinales Chilenas</strong>
           </Text>
         </div>
-        <div style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          width: "100%",
-          padding: "1rem",
-          background: "#B5DB71",
-        }}>
-          <Text style={{
+        <div
+          style={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
@@ -52,20 +44,34 @@ export default function Home({ data }) {
             width: "100%",
             padding: "1rem",
             background: "#B5DB71",
-          }} >
+          }}
+        >
+          <Text
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              width: "100%",
+              padding: "1rem",
+              background: "#B5DB71",
+            }}
+          >
             En esta pagina podras encontrar 30 hierbas junto a sus usos y preparación. Y para que resulte mas fácil encontrar la hierba que necesites, puedes filtrar segun la dolencia que estes padeciendo.
           </Text>
         </div>
-        <div style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          width: "100%",
-          border: "2px solid",
-          borderColor: "black",
-          padding: "1rem",
-        }} className="boton">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            width: "100%",
+            border: "2px solid",
+            borderColor: "black",
+            padding: "1rem",
+          }} className="boton"
+        >
           <Button ref={btnRef}
             colorScheme="green"
             marginTop={"1rem"}
@@ -76,7 +82,8 @@ export default function Home({ data }) {
             style={{
               border: "1px solid black",
               fontSize: "1.5rem",
-            }}>
+            }}
+          >
             Filtrar por dolencia
           </Button>
           <Text fontSize="3xl" marginBottom={"1rem"} marginTop={"1rem"} maxWidth={"100%"} marginRight={"2rem"}>
@@ -84,14 +91,16 @@ export default function Home({ data }) {
           </Text>
         </div>
         <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia} />
-        <Text style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          width: "100%",
-          padding: "1rem",
-        }} marginBottom={"1rem"}>
+        <Text
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            width: "100%",
+            padding: "1rem",
+          }} marginBottom={"1rem"}
+        >
           <strong>
             Pulsa sobre la hierba que quieras para mas información.
           </strong>
@@ -109,7 +118,6 @@ export default function Home({ data }) {
           {data.map((hierba, index) => (
             <TarjetaHierba key={index} hierba={hierba} dolencia={dolencia} setDolencia={setDolencia} />
           ))}
-          {console.log(dolencia)}
         </div>
         <SmallWithLogoLeft />
       </div>
