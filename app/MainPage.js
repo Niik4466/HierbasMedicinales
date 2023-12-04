@@ -1,6 +1,12 @@
 "use client";
 
-import { Text, extendTheme, ChakraProvider, Button, useDisclosure } from "@chakra-ui/react";
+import {
+  Text,
+  extendTheme,
+  ChakraProvider,
+  Button,
+  useDisclosure
+} from "@chakra-ui/react";
 import React, { useRef } from "react";
 import TarjetaHierba from "./components/TarjetaHierba";
 import { useState } from "react";
@@ -38,7 +44,6 @@ export default function Home({ data }) {
           padding: "1rem",
           background: "#B5DB71",
         }}>
-
           <Text style={{
             display: "flex",
             flexDirection: "row",
@@ -51,7 +56,6 @@ export default function Home({ data }) {
             En esta pagina podras encontrar 30 hierbas junto a sus usos y preparación. Y para que resulte mas fácil encontrar la hierba que necesites, puedes filtrar segun la dolencia que estes padeciendo.
           </Text>
         </div>
-
         <div style={{
           display: "flex",
           flexDirection: "row",
@@ -62,24 +66,30 @@ export default function Home({ data }) {
           borderColor: "black",
           padding: "1rem",
         }} className="boton">
-          <Button ref={btnRef} colorScheme="green" marginTop={"1rem"} marginBottom={"1rem"} marginLeft={"2rem"} marginRight={"2rem"} onClick={onOpen}
+          <Button ref={btnRef}
+            colorScheme="green"
+            marginTop={"1rem"}
+            marginBottom={"1rem"}
+            marginLeft={"2rem"}
+            marginRight={"2rem"}
+            onClick={onOpen}
             style={{
               border: "1px solid black",
               fontSize: "1.1rem",
             }}>
             Filtrar por dolencia
           </Button>
-          <Text fontSize="2xl" marginBottom={"1rem"} marginTop={"1rem"} maxWidth={"85%"} marginRight={"2rem"}>
+          <Text fontSize="2xl"
+            marginBottom={"1rem"}
+            marginTop={"1rem"}
+            maxWidth={"85%"}
+            marginRight={"2rem"}>
             Categoria Actual: {dolencia}
           </Text>
-
-
         </div>
         <DrawerComponent isOpen={isOpen} onClose={onClose} setDolencia={setDolencia} />
-
         <Text style={{
           display: "flex",
-          
           flexDirection: "row",
           justifyContent: "center",
           flexWrap: "wrap",
@@ -87,10 +97,9 @@ export default function Home({ data }) {
           padding: "1rem",
         }} marginBottom={"1rem"}>
           <strong>
-          Pulsa sobre la hierba que quieras para mas información.
+            Pulsa sobre la hierba que quieras para mas información.
           </strong>
         </Text>
-
         <div
           style={{
             display: "flex",
@@ -101,15 +110,12 @@ export default function Home({ data }) {
             justifyContent: "center"
           }}
         >
-
           {data.map((hierba, index) => (
             <TarjetaHierba key={index} hierba={hierba} dolencia={dolencia} setDolencia={setDolencia} />
-
           ))}
-
           {console.log(dolencia)}
         </div>
-        <SmallWithLogoLeft/>
+        <SmallWithLogoLeft />
       </div>
     </ChakraProvider>
   );

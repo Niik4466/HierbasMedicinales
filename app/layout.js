@@ -11,8 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className = "navegacion">
-        {/* Envolvemos todo nuestro contenido */}
+      <body className="navegacion">
         <Providers>
           {children}
         </Providers>

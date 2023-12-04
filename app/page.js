@@ -13,6 +13,6 @@ const fetchData = async () => {
 export default async function getData() {
   const data = await fetchData(); // Esperamos a que la función fetchData termine de ejecutarse
   return (
-    <MainPage data={data}/>
+    <MainPage data={data} />
   );
 }
